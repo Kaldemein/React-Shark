@@ -1,0 +1,40 @@
+.card{
+  width: 25%;
+  margin: 5px;
+  img{
+    width: 100%;
+  }
+  .cardInfo{
+    display: flex;
+    justify-content: space-between;
+  }
+  .price{
+    font-size:18px;
+    color: #444;
+    font-weight:600;
+    margin: 0;
+  }
+  .leftInfo{
+    .isNew{
+      margin: 5px 0;
+      font-size: 13px;
+      padding-left: 5px;
+      font-weight: bold;
+      border-left: 3px solid black;
+    }
+    .title{
+      font-size:16px;
+      color: #444;
+      font-weight: 500;
+      margin: 0;
+    }
+    .color{
+      color:#6E6E6E;
+      font-size: 14px;
+      margin: 8px 0;
+      font-weight: 500;
+    }
+    
+  }
+  
+}

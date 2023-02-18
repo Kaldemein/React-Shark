@@ -2,7 +2,12 @@ import React from 'react';
 import logoSvg from '../img/logoSvg.svg';
 
 import { Link } from 'react-router-dom';
-const Header = ({ openSearch, setOpenSearch, items }) => {
+const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
+  const onClickSearch = () => {
+    setOpenSearch(!openSearch);
+    setInputValue('');
+  };
+
   return (
     <header>
       <div className="container">
@@ -27,7 +32,7 @@ const Header = ({ openSearch, setOpenSearch, items }) => {
         </ul>
         <ul className="header__user-panel">
           <li>
-            <div className="header__items" onClick={() => setOpenSearch(!openSearch)}>
+            <div className="header__items" onClick={() => onClickSearch()}>
               <svg
                 class="Styles__SearchIcon-sc-4mixh6-1 jmTqIw"
                 width="20px"

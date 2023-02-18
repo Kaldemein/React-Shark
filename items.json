@@ -1,0 +1,319 @@
+{
+  "items": [
+    {
+      "title": "Power T-Shirt",
+      "price": "40",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerT-Shirt-A2A1X-BBBB.D3-Edit_CM_387b9104-894f-47ba-8418-188f66aaa0e2_600x.jpg?v=1660211846", 
+      "color": "Black",
+      "isNew": false,
+      "type": "pump cover",
+      "sex": "men"
+    },
+    {
+      "title": "Power Washed T-Shirt",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerAopCrewBlackA2A8C-BBBB3_9271976c-a252-4d6b-9441-00e762681bde_600x.jpg?v=1667466292", 
+      "color": "Black",
+      "isNew": false,
+      "type": "pump cover",
+      "sex": "men"
+    },
+    {
+      "title": "Essential Oversized T-Shirt",
+      "price": "40",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/OversizedT-ShirtWhiteA1A3E.A-Edit_BK_e0bd1dc3-17c1-4301-a69f-278b601b6841_600x.jpg?v=1660211842", 
+      "color": "White",
+      "isNew": false,
+      "type": "pump cover",
+      "sex": "men"
+    },
+    {
+      "title": "Power Washed Rag Top",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerRagTopBlackA2A9I-BBBB3_6f5f2fac-339e-4ca6-a608-535dadea3cb2_600x.jpg?v=1667466294", 
+      "color": "Black",
+      "isNew": false,
+      "type": "pump cover",
+      "sex": "men"
+    },
+    {
+      "title": "Recovery Graphic T-Shirt",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXRecoveryOversizedSST-Shirt-Black-A3A6J-BBBB-0237.30_600x.jpg?v=1671450315", 
+      "color": "Black",
+      "isNew": false,
+      "type": "",
+      "sex": "men"
+    },
+  
+    {
+      "title": "Sweat Seamless Longline Tank",
+      "price": "50",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLongTankParadiseBlueB4A7U-UBZG-0392.38_800x.jpg?v=1675367880", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Sweat Seamless Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessShortsParadiseBlueB6A4S-UBZG.338.52_800x.jpg?v=1675367864", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Sweat Seamless Sports Bra",
+      "price": "40",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLowerCoverageSportsBraAerospaceOrangeB4A4Q-OBJX-0675.65_800x.jpg?v=1675367883", 
+      "color": "White",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Sweat Seamless Leggings",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLeggings2AerospaceOrange-B6A4T-OBJX18_800x.jpg?v=1675791617", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+  
+  
+  
+  
+    {
+      "title": "Recovery Graphic T-Shirt",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/LegacyRagTopLightGreyCoreMarlA2A4O-GBCN.A-Edit_BK_600x.jpg?v=1650962669", 
+      "color": "Black",
+      "isNew": false,
+      "type": "pump cover",
+      "sex": "men"
+    },
+  
+  
+  
+    {
+      "title": "Vital Seamless 2.0 V Neck Sports Bra",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSSPORTSBRAAWB3A4KB3A4K-UBZ6-0517.46_5b131c92-1523-425a-896f-a324eb6f078d_800x.jpg?v=1674463031", 
+      "color": "Evening Blue Marl",
+      "isNew": true,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Vital Seamless 2.0 Leggings",
+      "price": "65",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWLEGGINGSB1A2BB1A2B-UBZ6-0621.56_f74fded9-2cc0-4900-b509-c2ea6044d160_800x.jpg?v=1674463049", 
+      "color": "Evening Blue Marl",
+      "isNew": true,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "vital seamless 2.0 1/4 track top",
+      "price": "55",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITAL1_4TRACKTOPREGULARB5A2KBrickRed_MarlB5A2K-RBML-1733.175_800x.jpg?v=1674553395", 
+      "color": "Brick red marl",
+      "isNew": true,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Vital seamless 2.0 shorts",
+      "price": "55",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWSHORTBrickRed_MarlB1A4J-RBML-1232.117_9def873c-8a7a-4533-a3df-8c86978436f9_800x.jpg?v=1674463048", 
+      "color": "Brick red marl",
+      "isNew": true,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Critical 2.0 Drop Arm Tank",
+      "price": "30",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXApolloMuscleFitLsT-ShirtBlackA4A4M-BBBB-0340.58_600x.jpg?v=1675110219", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Legacy Drop Arm Hoodie",
+      "price": "55",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CREST_JOGGER_-_BLACK.A-Edit_ZH_1_600x.jpg?v=1668603247", 
+      "color": "Limestone Marl",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Legacy Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CriticalSlimDropArmTankBlack-A1A2RA1A2R-BBBB.A_ZH_ZH_600x.jpg?v=1650962667", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Bold shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVAL5_WOVENSHORTSBLACK.A-Edit_AS_e6ce8485-0934-4dce-8c88-a4c0615703c2_600x.jpg?v=1660211659", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Legacy Seamless 2.0 Leggings",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWLEGGINGSB1A2BB1A2B-UBZ6-0621.56_f74fded9-2cc0-4900-b509-c2ea6044d160_800x.jpg?v=1674463049", 
+      "color": "Evening Blue Marl",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Legacy Seamless 2.0 Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWSHORTB1A4JEveningBlueMarl-0906.80_3377c653-afce-4407-8faa-f61873f9429f_800x.jpg?v=1674463048", 
+      "color": "Evening Blue Marl",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Legacy sports bra",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/TRAININGMINIMALSPORTSBRAEveningBlueB3A2J-UBZF-1109.130_800x.jpg?v=1674742426", 
+      "color": "Evening Blue Marl",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Legacy seamless 2.0 light long sleeve top",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALLIGHTLSTOPB4A8CB4A8C-UBZ6-0546.50_ec00001d-0f0e-4c4b-87b8-21f84dc796c2_800x.jpg?v=1674463019", 
+      "color": "Evening Blue Marl",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "woman"
+    },
+    {
+      "title": "Crest Hoodie",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestHoodieM_Slim_TruffleBrown-A2A4G-NBH4-1095.110-Edit_AS_f6304355-7d65-4d91-84dd-be1370f83110_800x.jpg?v=1674463063", 
+      "color": "Truffle Brown",
+      "isNew": false,
+      "type": "rest day",
+      "sex": "men"
+    },
+    {
+      "title": "Crest Joggers",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestPant_Slim_TruffleBrown-A2A4H-NBH4-1190.123-Edit_AS_b752ca72-e106-462f-8714-038eafa8ab63_800x.jpg?v=1674463063", 
+      "color": "Truffle Brown",
+      "isNew": false,
+      "type": "rest day",
+      "sex": "men"
+    },
+    {
+      "title": "Crest long sleeve t-shirt",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestLsT-Shirt_Regular_BlackA1A9E-BBBB.A_ZH_ZH_83137828-0b51-4d4d-8177-769e731d798b_800x.jpg?v=1644402038", 
+      "color": "Black",
+      "isNew": false,
+      "type": "rest day",
+      "sex": "men"
+    },
+    {
+      "title": "Crest joggers",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CREST_JOGGER_-_BLACK.A-Edit_ZH_1_800x.jpg?v=1666101966", 
+      "color": "Black",
+      "isNew": false,
+      "type": "rest day",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVALSHORTSGMSH3475-BK.A-Edit_CM_800x.jpg?v=1608495283", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival knit joggers",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/A1A1Y-BBBBArrivalSlimKnitPantBlackELLIS16.A_GB_EDIT_GB_BK_800x.jpg?v=1628755049", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival 1/4 zip pullover",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/Arrival14ZipCharcoalGreyELLIS22.A_GB_EDIT_ZH_New_581cd389-9831-46af-b547-9f561ad5b3c5_800x.jpg?v=1645778479", 
+      "color": "Grey",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival 1/4 zip pullover",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/A1A2E-BBBBArrival14ZipBlack35.A_GB_EDIT_copy_ZH_800x.jpg?v=1645778479", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Crest Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestShortBlackA1A2O41.A-Edit_HK_ZH_40ae7061-07b3-471a-a8fb-b5ea6d1d9bda_600x.jpg?v=1644508076", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Sport Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SportShortBlackA3A1Q-BBBB-0213.20_600x.jpg?v=1667466331", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival 5 Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVAL5_WOVENSHORTSBLACK.A-Edit_AS_e6ce8485-0934-4dce-8c88-a4c0615703c2_600x.jpg?v=1660211659", 
+      "color": "Grey",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    },
+    {
+      "title": "Arrival Shorts",
+      "price": "45",
+      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVAL7_SHORTS_A1A2G-BBBB-M-BY1_BLACK_.A-EditTIFF_IS_600x.jpg?v=1644335076", 
+      "color": "Black",
+      "isNew": false,
+      "type": "training essentials",
+      "sex": "men"
+    }
+  
+  ]
+}

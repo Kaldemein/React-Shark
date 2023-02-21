@@ -1,9 +1,21 @@
 import React from 'react';
 import Card from './Card/index';
+import debounce from 'lodash.debounce';
+
 function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputValue }) {
+  const [localValue, setLocalValue] = React.useState('');
+
+  const testDebunce = React.useCallback(
+    debounce((str) => {
+      setInputValue(str);
+    }, 800),
+    [],
+  );
   const onInputChange = (e) => {
-    setInputValue(e.target.value);
+    setLocalValue(e.target.value);
+    testDebunce(e.target.value);
   };
+
   const onClickClose = () => {
     setOpenSearch(!openSearch);
     setInputValue('');
@@ -14,7 +26,7 @@ function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputVal
       <div className="search-modal__container">
         <input
           onChange={(e) => onInputChange(e)}
-          value={inputValue}
+          value={localValue}
           placeholder="Search something..."
           type="text"
         />

@@ -2,7 +2,7 @@ import React from 'react';
 import logoSvg from '../img/logoSvg.svg';
 
 import { Link } from 'react-router-dom';
-const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
+const Header = ({ openSearch, setOpenSearch, setInputValue, setOpenDrawer, openDrawer }) => {
   const onClickSearch = () => {
     setOpenSearch(!openSearch);
     setInputValue('');
@@ -15,7 +15,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
           <Link className="header__logo" to="/">
             <img width="38" src={logoSvg} alt="Pizza logo" />
             <div>
-              <h1>React Shark</h1>
+              <h1>REACTSHARK</h1>
             </div>
           </Link>
         </div>
@@ -100,7 +100,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
             </div>
           </li>
           <li>
-            <div className="header__items">
+            <div onClick={() => setOpenDrawer(!openDrawer)} className="header__items">
               <svg
                 class="Styles__BagIcon-sc-744ty0-12 dsqEKk"
                 width="16"

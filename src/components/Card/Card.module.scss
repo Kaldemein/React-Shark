@@ -1,8 +1,51 @@
 .card{
   width: 25%;
   margin: 5px;
+  position: relative;
   img{
     width: 100%;
+  }
+  .sizes{
+    width: 97%;
+    border-radius: 5px;
+    background-color: #ffffffd4;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 5px;
+    bottom: 62px;
+    transition: all 0.3s ease-in-out;
+    // transition: visibility 0.3s ease-in-out;
+    // transition: opacity 0.3s ease-in-out;
+    button{
+      padding: 10px;
+      width: 40px;
+      background-color: #fff;
+      border: none;
+      box-shadow: 0px 0px 8px -1px rgba(34, 60, 80, 0.536);
+      margin: 0 5px;
+      transition: transform 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover{
+        color: white;
+        background-color: #000000;
+        transform: translateY(-2px);
+      }
+      &:focus{
+        color: rgb(255, 255, 255);
+        background-color: #458dd5;
+        transform: translateY(-2px);
+      }
+    }
+    ul{
+      display: flex;
+      width: 80%;
+      padding: 0;
+      justify-content: center;
+      
+      list-style: none;
+    }
   }
   .cardInfo{
     display: flex;

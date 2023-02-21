@@ -5,25 +5,36 @@ import Home from './pages/Home';
 import Woman from './pages/Woman';
 import Men from './pages/Men';
 import axios from 'axios';
-// import items from '../items.json';
 import SearchModal from './components/SearchModal';
-
+import Drawer from './components/Drawer/';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   const [openSearch, setOpenSearch] = React.useState(false);
+  const [openDrawer, setOpenDrawer] = React.useState(false);
   const [items, setItems] = React.useState([]);
   const [inputValue, setInputValue] = React.useState('');
+  const [cart, setCart] = React.useState([]);
 
   openSearch
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'visible');
+  openDrawer
+    ? (document.body.style.overflow = 'hidden')
+    : (document.body.style.overflow = 'visible');
 
   React.useEffect(() => {
-    axios.get(`http://localhost:3004/items`).then((response) => {
+    axios.get(`http://localhost:4000/items`).then((response) => {
       setItems(response.data);
     });
+    axios.get(`http://localhost:4000/cart`).then((response) => {
+      setCart(response.data);
+    });
   }, []);
+
+  const onClickRemove = (id) => {
+    axios.delete(`http://localhost:4000/items/id`).then((response) => {});
+  };
 
   return (
     <div className="App">
@@ -31,8 +42,11 @@ function App() {
         items={items}
         setInputValue={setInputValue}
         openSearch={openSearch}
+        openDrawer={openDrawer}
+        setOpenDrawer={setOpenDrawer}
         setOpenSearch={setOpenSearch}
       />
+      <Drawer cart={cart} setOpenDrawer={setOpenDrawer} openDrawer={openDrawer} />
       <SearchModal
         inputValue={inputValue}
         setInputValue={setInputValue}

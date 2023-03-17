@@ -1,16 +1,14 @@
 import React from 'react';
 
-const Banner = ({ backgroundImagesURL }) => {
+const Banner = ({ BannerBackground, headling }) => {
   return (
     <div
       style={{
-        backgroundImage: `url("${backgroundImagesURL}")`,
+        backgroundImage: `url("${BannerBackground}")`,
       }}
       className="banner">
       <div className="container">
-        <h2>
-          TRAINING ESSENTIALS: <br /> ADAPT & ARRIVAL
-        </h2>
+        <h2>{headling}</h2>
         <p>
           Feel good, perform better in Adapt’s bold colours & patterns. <br />
           Redefine your potential in Arrival’s lightweight, breathable designs.

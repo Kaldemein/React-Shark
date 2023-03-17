@@ -83,6 +83,26 @@ header{
     .header__logo{
       display: flex;
     }
+    .header__items{
+      position: relative;
+      span{
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #4676d6;
+        color: white;
+        width: 5px;
+        height: 5px;
+        font-size: 12px;
+        position: absolute;
+        top: 12px;
+        right: 8px;
+      }
+    }
     h1{
       font-size: 18px;
       margin-left: 10px;
@@ -109,6 +129,7 @@ header{
     font-size: 40px;
     color: white;
     margin-bottom: 0;
+    width: 550px;
   }
   p{
     color: white
@@ -133,7 +154,9 @@ header{
   h4{
     margin: 0;
     font-size: 14px;
-    color:rgb(74, 74, 74)
+    color:rgb(74, 74, 74);
+    text-transform: uppercase;
+    
   }
   &__items{
     display: flex;
@@ -257,5 +280,85 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+.Accessories{
+  .active{
+    border-bottom: 3px solid #000;
+    color: black;
+
+  }
+  &__header-block{
+    background-color: #e7e7e7;
+    text-transform: uppercase;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0px 3rem;  
+
+    h2{
+      margin: 0;
+      font-size: 34px;
+
+    }
+    
+  }
+  &__types{
+    margin: 20px 0 0 0;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  &__SelectedFilters{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0px 3rem;
+    p{
+      font-size: 14px;
+      color:rgb(108, 108, 108);
+      font-weight: 700;
+      padding-right: 10px
+    }
+    span{
+      color: #464646;
+      padding: 6px 20px;
+      background-color: #e2e2e2;
+      font-weight: 700;
+      font-size: 15px;
+      margin-right: 10px;
+      border-radius: 3px;
+    }
+  }
+  &__filters, 
+  &__types{
+    ul{
+      display: flex;
+      text-transform: uppercase;
+      color:rgb(115, 115, 115);
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0px 3rem;  
+
+      li{
+        padding: 20px 20px;
+        cursor: pointer;
+        transition: color 0.3s;
+        &:first-child{
+          padding: 20px 0px;
+
+        }
+      } 
+    }
+  }
+  &__items{
+      padding: 0 48px;
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 10px;
+      grid-row-gap: 20px;
   }
 }

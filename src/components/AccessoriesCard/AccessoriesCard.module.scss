@@ -1,0 +1,37 @@
+.AccessoriesCard{
+  width: 100%;
+  cursor: pointer;
+  img{
+    width: 100%;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price{
+    font-size:18px;
+    color: #444;
+    font-weight:600;
+    margin: 0;
+  }
+  &__isNew{
+      text-transform: uppercase;
+      margin: 5px 0;
+      font-size: 13px;
+      padding-left: 5px;
+      font-weight: bold;
+      border-left: 3px solid black;
+  }
+  &__title{
+    font-size:16px;
+    color: #444;
+    font-weight: 500;
+    margin: 0;
+  }
+  &__color{
+    color:#6E6E6E;
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 500;
+  }
+}

@@ -1,8 +1,16 @@
 import React from 'react';
 import styles from './Card.module.scss';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOpenDrawer } from '../../redux/slices/cartSlice';
 
-const Card = ({ title, price, imageUR, color, isNew }) => {
+const Card = ({ title, price, imageUR, color, isNew, sizes, id, onClickAdd }) => {
+  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
+  const onClickSizes = (size) => {
+    onClickAdd({ title, price, imageUR, color, isNew, size, id, onClickAdd });
+    dispatch(setOpenDrawer());
+  };
   return (
     <div
       on
@@ -18,21 +26,11 @@ const Card = ({ title, price, imageUR, color, isNew }) => {
         }
         className={styles.sizes}>
         <ul>
-          <li>
-            <button>XS</button>
-          </li>
-          <li>
-            <button>S</button>
-          </li>
-          <li>
-            <button>M</button>
-          </li>
-          <li>
-            <button>L</button>
-          </li>
-          <li>
-            <button>XL</button>
-          </li>
+          {sizes.map((size) => (
+            <li>
+              <button onClick={() => onClickSizes(size)}>{size}</button>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={styles.cardInfo}>

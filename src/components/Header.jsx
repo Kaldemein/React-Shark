@@ -1,11 +1,21 @@
 import React from 'react';
 import logoSvg from '../img/logoSvg.svg';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setOpenDrawer } from '../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
-const Header = ({ openSearch, setOpenSearch, setInputValue, setOpenDrawer, openDrawer }) => {
+
+const Header = ({ openSearch, setOpenSearch, setInputValue, cart }) => {
+  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  // const items = useSelector(state => state)
+  const dispatch = useDispatch();
+
   const onClickSearch = () => {
     setOpenSearch(!openSearch);
     setInputValue('');
+  };
+
+  const onClickDrawer = () => {
+    dispatch(setOpenDrawer());
   };
 
   return (
@@ -27,7 +37,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue, setOpenDrawer, openD
             <Link to="/men">Men</Link>
           </li>
           <li>
-            <a href="#">accessories</a>
+            <Link to="/accessories">accessories</Link>
           </li>
         </ul>
         <ul className="header__user-panel">
@@ -100,7 +110,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue, setOpenDrawer, openD
             </div>
           </li>
           <li>
-            <div onClick={() => setOpenDrawer(!openDrawer)} className="header__items">
+            <div onClick={() => onClickDrawer()} className="header__items">
               <svg
                 class="Styles__BagIcon-sc-744ty0-12 dsqEKk"
                 width="16"
@@ -117,6 +127,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue, setOpenDrawer, openD
                   d="M12.2121 3.55H15.8V18H0.5V3.55H4.08793C4.4824 1.6705 6.15692 0.25 8.15 0.25C10.1431 0.25 11.8176 1.6705 12.2121 3.55ZM10.6589 3.55C10.3193 2.55725 9.40342 1.8238 8.31676 1.75525L8.15 1.75C6.99106 1.75 5.99789 2.50685 5.64105 3.55H10.6589ZM14.299 5.049H1.999V16.499H14.299V5.049Z"
                   fill="black"></path>
               </svg>
+              <span>{cart.length}</span>
             </div>
           </li>
         </ul>

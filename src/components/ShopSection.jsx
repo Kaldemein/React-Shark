@@ -1,12 +1,12 @@
 import React from 'react';
 import Card from './Card';
 
-function ShopSection({ items, headling, sort }) {
+function ShopSection({ items, headling, sort, onClickAdd }) {
   const { sortType, sortValue } = sort;
   return (
     <div className="shop-section">
       <div className="container">
-        <h4>WOMENS</h4>
+        <h4>{sortValue.find((sex) => sex === 'men' || sex === 'woman')}</h4>
         <div className="shop-section__headlings-container">
           <h3>{headling}</h3>
           <a href="">View All</a>
@@ -20,7 +20,7 @@ function ShopSection({ items, headling, sort }) {
             )
             .slice(0, 4)
             .map((item) => (
-              <Card {...item} />
+              <Card onClickAdd={onClickAdd} {...item} />
             ))}
         </div>
       </div>

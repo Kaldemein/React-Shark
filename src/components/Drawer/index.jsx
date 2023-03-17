@@ -1,10 +1,35 @@
 import React from 'react';
 import styles from './Drawer.module.scss';
 import ItemCard from '../ItemCart/';
+import { useSelector, useDispatch } from 'react-redux';
+import { setOpenDrawer, closeDrawer } from '../../redux/slices/cartSlice';
 
-const Drawer = ({ cart, setOpenDrawer, openDrawer }) => {
+const Drawer = ({ cart, onClickRemove, items }) => {
+  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  const dispatch = useDispatch();
+  const drawerRef = React.useRef();
+  const cartRef = React.useRef();
+
+  const onClickClose = () => {
+    dispatch(setOpenDrawer());
+  };
+
+  console.log('drawer', openDrawer);
+
+  React.useEffect(() => {
+    drawerRef.current.addEventListener('click', (event) => {
+      if (!event.composedPath().includes(cartRef.current)) {
+        dispatch(closeDrawer());
+        // if (openDrawer) {
+        //   dispatch(closeDrawer());
+        // }
+      }
+    });
+  }, []);
+
   return (
     <div
+      ref={drawerRef}
       style={
         openDrawer
           ? { visibility: 'visible', opacity: '1' }
@@ -12,6 +37,7 @@ const Drawer = ({ cart, setOpenDrawer, openDrawer }) => {
       }
       className={styles.overlay}>
       <div
+        ref={cartRef}
         style={openDrawer ? { transform: 'translateX(0%)' } : { transform: 'translateX(100%)' }}
         className={styles.cart}>
         <div>
@@ -19,7 +45,7 @@ const Drawer = ({ cart, setOpenDrawer, openDrawer }) => {
             <h4>Your bag</h4>
             <button>
               <svg
-                onClick={() => setOpenDrawer(!openDrawer)}
+                onClick={() => onClickClose()}
                 width="15px"
                 height="15px"
                 viewBox="0 0 24 24"
@@ -39,7 +65,7 @@ const Drawer = ({ cart, setOpenDrawer, openDrawer }) => {
           </div>
           <div className="items">
             {cart.map((item) => (
-              <ItemCard {...item} />
+              <ItemCard items={items} onClickRemove={(id) => onClickRemove(id)} {...item} />
             ))}
           </div>
         </div>

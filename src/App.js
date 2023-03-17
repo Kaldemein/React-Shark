@@ -44,7 +44,7 @@ function App() {
       try {
         const [itemsResponse, cartResponse] = await Promise.all([
           axios.get(
-            `http://https://react-shark-json-server-f9dslume7-ruzel22.vercel.app/items${
+            `https://react-shark-json-server-f9dslume7-ruzel22.vercel.app/items${
               filterBy !== 'all' ? `?category=${filterBy}` : ''
             }`,
           ),
@@ -76,7 +76,7 @@ function App() {
   const onClickRemove = (id) => {
     console.log(id);
     axios
-      .delete(`https://react-shark-json-server-f9dslume7-ruzel22.vercel.app/${id}`)
+      .delete(`https://react-shark-json-server-f9dslume7-ruzel22.vercel.app/items/${id}`)
       .then((response) => {
         setCart((prev) => prev.filter((item) => item.id !== id));
       });
@@ -85,7 +85,7 @@ function App() {
   const onClickAdd = (obj) => {
     if (cart.findIndex((cartitem) => cartitem.id == obj.id) >= 0) {
     }
-    axios.post(`hthttps://react-shark-json-server-f9dslume7-ruzel22.vercel.app/cart/`, obj);
+    axios.post(`https://react-shark-json-server-f9dslume7-ruzel22.vercel.app/cart/`, obj);
     setCart((prev) => [...prev, obj]);
   };
 

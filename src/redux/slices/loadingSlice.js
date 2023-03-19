@@ -9,7 +9,7 @@ export const loadingSlice = createSlice({
   initialState,
   reducers: {
     setIsLoaded(state, action) {
-      state.isLoaded = !state.isLoaded;
+      state.isLoaded = true;
     },
   },
 });

@@ -13,7 +13,6 @@ const Card = ({ title, price, imageUR, color, isNew, sizes, id, onClickAdd }) =>
   };
   return (
     <div
-      on
       onMouseEnter={() => setOpenSizes(true)}
       onMouseLeave={() => setOpenSizes(false)}
       className={styles.card}>

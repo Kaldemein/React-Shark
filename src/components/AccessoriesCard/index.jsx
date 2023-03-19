@@ -1,8 +1,13 @@
 import React from 'react';
 import style from './AccessoriesCard.module.scss';
-const AccessoriesCard = ({ isNew, title, color, price, imageUR }) => {
+const AccessoriesCard = ({ isNew, title, color, price, imageUR, sizes }) => {
+  const [openSizes, setOpenSizes] = React.useState(false);
+
   return (
-    <div className={style.AccessoriesCard}>
+    <div
+      onMouseEnter={() => setOpenSizes(true)}
+      onMouseLeave={() => setOpenSizes(false)}
+      className={style.AccessoriesCard}>
       <img src={imageUR} alt="" />
       <div className={style.AccessoriesCard__info}>
         <div className={style.AccessoriesCard__right}>
@@ -14,6 +19,23 @@ const AccessoriesCard = ({ isNew, title, color, price, imageUR }) => {
           <p className={style.AccessoriesCard__price}>$ {price}</p>
         </div>
       </div>
+      <ul
+        style={
+          openSizes
+            ? { visibility: 'visible', opacity: '1' }
+            : { visibility: 'hidden', opacity: '0' }
+        }
+        className={style.AccessoriesCard__sizes}>
+        {sizes.length === 0 ? (
+          <button className={style.noSizeButton}>Add to cart</button>
+        ) : (
+          sizes.map((size) => (
+            <li>
+              <button>{size}</button>
+            </li>
+          ))
+        )}
+      </ul>
     </div>
   );
 };

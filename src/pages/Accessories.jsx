@@ -4,10 +4,18 @@ import SelectedFilterCard from '../components/SelectedFilterCard/';
 import FilterModal from '../components/FilterModal/';
 import Skeleton from '../components/AccessoriesCard/Skeleton';
 import { useSelector } from 'react-redux';
+//top
+//joggers
+//shirt
+//shorts
+//leggins
+//pullover
+//передать в card openDrawer
 const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilter }) => {
   const filter = ['Gender', 'Size', 'Color', 'Pattern', 'Discount', 'Price', 'Sort By'];
   const types = ['All', 'Bags', 'Socks', 'Headwear', 'Equipment', 'Bottles'];
   const [activeType, setActiveType] = React.useState(0);
+
   const onClickType = (index, item) => {
     setFilterBy(item.toLocaleLowerCase());
     setActiveType(index);

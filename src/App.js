@@ -11,6 +11,7 @@ import Drawer from './components/Drawer/';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsLoaded } from './redux/slices/loadingSlice';
+import { onAdd } from './redux/slices/cartSlice';
 
 //  for redux
 //  onClickRemove
@@ -30,11 +31,11 @@ function App() {
   // const [openDrawer, setOpenDrawer] = React.useState(false);
   const [items, setItems] = React.useState([]);
   const [inputValue, setInputValue] = React.useState('');
-  const [cart, setCart] = React.useState([]);
   const [activeFilter, setActiveFilter] = React.useState([]);
   const [filterBy, setFilterBy] = React.useState('all'); //filter для страницы accessories и axios запроса
 
   const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
+  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   console.log(isLoaded);
   const dispatch = useDispatch();
 
@@ -45,15 +46,13 @@ function App() {
   React.useEffect(() => {
     async function fetchData() {
       try {
-        const [itemsResponse, cartResponse] = await Promise.all([
+        const [itemsResponse] = await Promise.all([
           axios.get(
             `https://641070ba45a5f98532468d6c.mockapi.io/items${
               filterBy !== 'all' ? `?category=${filterBy}` : ''
             }`,
           ),
-          axios.get(`https://641070ba45a5f98532468d6c.mockapi.io/cart`),
         ]);
-        setCart(cartResponse.data);
         setItems(itemsResponse.data);
         dispatch(setIsLoaded());
       } catch (error) {
@@ -64,28 +63,16 @@ function App() {
     fetchData();
   }, [filterBy]);
 
-  const onClickRemove = (id) => {
-    console.log(id);
-    axios.delete(`https://641070ba45a5f98532468d6c.mockapi.io/cart/${id}`).then((response) => {
-      setCart((prev) => prev.filter((cartItem) => cartItem.id !== id));
-    });
-  };
-
   const onClickAdd = (obj) => {
     console.log(obj.id);
     axios.post(`https://641070ba45a5f98532468d6c.mockapi.io/cart/`, obj);
-    setCart((prev) => [...prev, obj]);
+    dispatch(onAdd(obj));
   };
 
   return (
     <div className="App">
-      <Header
-        cart={cart}
-        setInputValue={setInputValue}
-        openSearch={openSearch}
-        setOpenSearch={setOpenSearch}
-      />
-      <Drawer items={items} onClickRemove={onClickRemove} cart={cart} />
+      <Header setInputValue={setInputValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
+      <Drawer items={items} />
       <SearchModal
         inputValue={inputValue}
         setInputValue={setInputValue}

@@ -409,5 +409,10 @@ header{
       grid-template-rows: repeat(3, 1fr);
       grid-column-gap: 10px;
       grid-row-gap: 20px;
+      @media (max-width: 1604px){
+        grid-template-columns: repeat(4, 1fr);
+      
+      }
+      
   }
 }

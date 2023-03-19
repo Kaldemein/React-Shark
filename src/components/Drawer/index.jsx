@@ -2,18 +2,39 @@ import React from 'react';
 import styles from './Drawer.module.scss';
 import ItemCard from '../ItemCart/';
 import { useSelector, useDispatch } from 'react-redux';
-import { setOpenDrawer, closeDrawer } from '../../redux/slices/cartSlice';
+import axios from 'axios';
+import { setOpenDrawer, closeDrawer, setCart, onRemove } from '../../redux/slices/cartSlice';
 
-const Drawer = ({ cart, onClickRemove }) => {
+const Drawer = ({}) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  const cart = useSelector((state) => state.cartSlice.cart);
+
   const dispatch = useDispatch();
   const drawerRef = React.useRef();
   const cartRef = React.useRef();
 
+  //получаем товары в корзину
+  const fetchCart = async () => {
+    const cartResponse = await axios.get(`https://641070ba45a5f98532468d6c.mockapi.io/cart`);
+    dispatch(setCart(cartResponse.data));
+  };
+  React.useEffect(() => {
+    fetchCart();
+  }, [cart.length]);
+
+  const onClickRemove = (id) => {
+    console.log(id);
+    axios.delete(`https://641070ba45a5f98532468d6c.mockapi.io/cart/${id}`).then((response) => {
+      dispatch(onRemove(id));
+    });
+  };
+
+  //открыть-закрыть корзину
   const onClickClose = () => {
     dispatch(setOpenDrawer());
   };
 
+  //Для закрытия окна щелчком мыши
   React.useEffect(() => {
     drawerRef.current.addEventListener('click', (event) => {
       if (!event.composedPath().includes(cartRef.current)) {

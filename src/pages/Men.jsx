@@ -5,7 +5,7 @@ import BottomBlock from '../components/BottomBlock';
 
 const BannerProps = {
   banners: [
-    'https://cdn.shopify.com/s/files/1/1367/5207/files/GY78832_ADHOC-008_INTL_Web_Banner_Desktop_3800x1700px_1_1900x.jpg?v=1675945844',
+    'https://images.ctfassets.net/wl6q2in9o7k3/39vufYYZb3KvzlxDRu3laq/0c5b74be1dd79ff885fe1648608d81da/GY77473_APE-001_AUS_Web_Banner_Desktop_3800x1700px_Apex.jpg?w=3840&q=90',
     'https://cdn.shopify.com/s/files/1/1367/5207/files/GY77468_C66-018_AUS_Web_Banner_Desktop_3800x1700px_Arrival_1_1900x.jpg?v=1674723163',
     'https://cdn.shopify.com/s/files/1/1367/5207/files/MENS_SHORTS_DESKTOP_1900x.png?v=1674723341',
     'https://cdn.shopify.com/s/files/1/1367/5207/files/MENS_BESTSELLERS_DESKTOP_9e8f5c1c-6373-48e3-829d-c1151a7c826e_1900x.png?v=1674064033',

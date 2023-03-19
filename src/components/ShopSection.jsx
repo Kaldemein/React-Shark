@@ -1,8 +1,11 @@
 import React from 'react';
 import Card from './Card';
-
+import { useSelector } from 'react-redux';
+import Skeleton from './Card/Skeleton.jsx';
 function ShopSection({ items, headling, sort, onClickAdd }) {
   const { sortType, sortValue } = sort;
+  const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
+  console.log(isLoaded);
   return (
     <div className="shop-section">
       <div className="container">
@@ -12,16 +15,16 @@ function ShopSection({ items, headling, sort, onClickAdd }) {
           <a href="">View All</a>
         </div>
         <div className="shop-section__items">
-          {items
-            .filter((item) =>
-              sortType.every((type, index) =>
-                item[type].toLowerCase().includes(sortValue[index].toLowerCase()),
-              ),
-            )
-            .slice(0, 4)
-            .map((item) => (
-              <Card onClickAdd={onClickAdd} {...item} />
-            ))}
+          {isLoaded
+            ? items
+                .filter((item) =>
+                  sortType.every((type, index) =>
+                    item[type].toLowerCase().includes(sortValue[index].toLowerCase()),
+                  ),
+                )
+                .slice(0, 4)
+                .map((item) => <Card onClickAdd={onClickAdd} {...item} />)
+            : [...new Array(4)].map((_, i) => <Skeleton key={i} />)}
         </div>
       </div>
     </div>

@@ -2,6 +2,8 @@ import React from 'react';
 import AccessoriesCard from '../components/AccessoriesCard/index';
 import SelectedFilterCard from '../components/SelectedFilterCard/';
 import FilterModal from '../components/FilterModal/';
+import Skeleton from '../components/AccessoriesCard/Skeleton';
+import { useSelector } from 'react-redux';
 const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilter }) => {
   const filter = ['Gender', 'Size', 'Color', 'Pattern', 'Discount', 'Price', 'Sort By'];
   const types = ['All', 'Bags', 'Socks', 'Headwear', 'Equipment', 'Bottles'];
@@ -11,7 +13,7 @@ const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilt
     setActiveType(index);
   };
 
-  const onClickFilter = () => {};
+  const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
 
   React.useEffect(() => {
     return () => {
@@ -49,11 +51,11 @@ const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilt
         </ul>
       </div>
       <div className="Accessories__items">
-        {items
-          .filter((item) => item.type === 'accessories')
-          .map((accessory) => (
-            <AccessoriesCard {...accessory} />
-          ))}
+        {isLoaded
+          ? items
+              .filter((item) => item.type === 'accessories')
+              .map((accessory) => <AccessoriesCard {...accessory} />)
+          : [...new Array(10)].map((_, i) => <Skeleton key={i} />)}
       </div>
     </div>
   );

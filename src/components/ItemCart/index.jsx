@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ItemCart.module.scss';
 
-const ItemCard = ({ id, title, price, imageUR, color, isNew, onClickRemove, size, items }) => {
+const ItemCard = ({ id, title, price, imageUR, color, isNew, onClickRemove, size }) => {
   return (
     <div className={styles.item}>
       <img width={105} height={125} src={imageUR} alt="CartItem" />

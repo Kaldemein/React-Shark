@@ -687,24 +687,6 @@
   ],
   "cart": [
     {
-      "id": 2,
-      "category": "shirt",
-      "title": "Power Washed T-Shirt",
-      "price": "45",
-      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerAopCrewBlackA2A8C-BBBB3_9271976c-a252-4d6b-9441-00e762681bde_600x.jpg?v=1667466292",
-      "color": "Black",
-      "isNew": false,
-      "type": "pump cover",
-      "sex": "men",
-      "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
-      ]
-    },
-    {
       "title": "Critical 2.0 Drop Arm Tank",
       "price": "30",
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXApolloMuscleFitLsT-ShirtBlackA4A4M-BBBB-0340.58_600x.jpg?v=1675110219",

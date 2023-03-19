@@ -13,7 +13,7 @@ const Banner = ({ BannerBackground, headling }) => {
           Feel good, perform better in Adapt’s bold colours & patterns. <br />
           Redefine your potential in Arrival’s lightweight, breathable designs.
         </p>
-        <div>
+        <div className="buttons">
           <button>SHOP ADAPT</button>
           <button>SHOP ARRIVAL</button>
         </div>

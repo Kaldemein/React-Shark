@@ -4,7 +4,7 @@ import ItemCard from '../ItemCart/';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer, closeDrawer } from '../../redux/slices/cartSlice';
 
-const Drawer = ({ cart, onClickRemove, items }) => {
+const Drawer = ({ cart, onClickRemove }) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const dispatch = useDispatch();
   const drawerRef = React.useRef();
@@ -13,8 +13,6 @@ const Drawer = ({ cart, onClickRemove, items }) => {
   const onClickClose = () => {
     dispatch(setOpenDrawer());
   };
-
-  console.log('drawer', openDrawer);
 
   React.useEffect(() => {
     drawerRef.current.addEventListener('click', (event) => {
@@ -64,8 +62,8 @@ const Drawer = ({ cart, onClickRemove, items }) => {
             </button>
           </div>
           <div className="items">
-            {cart.map((item) => (
-              <ItemCard items={items} onClickRemove={(id) => onClickRemove(id)} {...item} />
+            {cart.map((cartItem) => (
+              <ItemCard onClickRemove={(id) => onClickRemove(id)} {...cartItem} />
             ))}
           </div>
         </div>

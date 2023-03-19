@@ -8,7 +8,7 @@ const Card = ({ title, price, imageUR, color, isNew, sizes, id, onClickAdd }) =>
   const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
   const onClickSizes = (size) => {
-    onClickAdd({ title, price, imageUR, color, isNew, size, id, onClickAdd });
+    onClickAdd({ title, price, imageUR, color, isNew, size, onClickAdd });
     dispatch(setOpenDrawer());
   };
   return (

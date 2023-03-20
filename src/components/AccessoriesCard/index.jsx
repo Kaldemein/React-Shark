@@ -1,8 +1,14 @@
 import React from 'react';
 import style from './AccessoriesCard.module.scss';
-const AccessoriesCard = ({ isNew, title, color, price, imageUR, sizes }) => {
+import { useDispatch } from 'react-redux';
+import { setOpenDrawer } from '../../redux/slices/cartSlice';
+const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, onClickAdd }) => {
   const [openSizes, setOpenSizes] = React.useState(false);
-
+  const dispatch = useDispatch();
+  const onClickSizes = (size) => {
+    onClickAdd({ id, title, price, imageUR, color, isNew, size });
+    dispatch(setOpenDrawer());
+  };
   return (
     <div
       onMouseEnter={() => setOpenSizes(true)}
@@ -31,7 +37,7 @@ const AccessoriesCard = ({ isNew, title, color, price, imageUR, sizes }) => {
         ) : (
           sizes.map((size) => (
             <li>
-              <button>{size}</button>
+              <button onClick={() => onClickSizes(size)}>{size}</button>
             </li>
           ))
         )}

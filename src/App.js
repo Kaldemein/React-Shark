@@ -18,14 +18,6 @@ import { onAdd } from './redux/slices/cartSlice';
 // onClickAdd
 //  items
 
-//top
-//joggers
-//shirt
-//shorts
-//leggins
-//pullover
-//передать в card openDrawer
-
 function App() {
   const [openSearch, setOpenSearch] = React.useState(false);
   // const [openDrawer, setOpenDrawer] = React.useState(false);
@@ -108,6 +100,7 @@ function App() {
               filterBy={filterBy}
               setFilterBy={setFilterBy}
               items={items}
+              onClickAdd={onClickAdd}
             />
           }
           openSearch={openSearch}

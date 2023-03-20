@@ -11,7 +11,14 @@ import { useSelector } from 'react-redux';
 //leggins
 //pullover
 //передать в card openDrawer
-const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilter }) => {
+const Accessories = ({
+  items,
+  filterBy,
+  setFilterBy,
+  setActiveFilter,
+  activeFilter,
+  onClickAdd,
+}) => {
   const filter = ['Gender', 'Size', 'Color', 'Pattern', 'Discount', 'Price', 'Sort By'];
   const types = ['All', 'Bags', 'Socks', 'Headwear', 'Equipment', 'Bottles'];
   const [activeType, setActiveType] = React.useState(0);
@@ -62,7 +69,7 @@ const Accessories = ({ items, filterBy, setFilterBy, setActiveFilter, activeFilt
         {isLoaded
           ? items
               .filter((item) => item.type === 'accessories')
-              .map((accessory) => <AccessoriesCard {...accessory} />)
+              .map((accessory) => <AccessoriesCard onClickAdd={onClickAdd} {...accessory} />)
           : [...new Array(10)].map((_, i) => <Skeleton key={i} />)}
       </div>
     </div>

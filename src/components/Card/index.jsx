@@ -3,14 +3,16 @@ import styles from './Card.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../../redux/slices/cartSlice';
 
-const Card = ({ title, price, imageUR, color, isNew, sizes, id, onClickAdd }) => {
+const Card = ({ title, price, type, category, imageUR, color, isNew, sizes, id, onClickAdd }) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
+
   const onClickSizes = (size) => {
-    onClickAdd({ id, title, price, imageUR, color, isNew, size });
+    onClickAdd({ id, title, type, price, category, imageUR, color, isNew, size });
     dispatch(setOpenDrawer());
   };
+
   return (
     <div
       onMouseEnter={() => setOpenSizes(true)}

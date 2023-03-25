@@ -210,6 +210,11 @@ header{
     text-transform: uppercase;
     
   }
+  a{
+    width: 25%;
+    margin: 5px;
+    position: relative;
+  }
   &__items{
     display: flex;
     justify-content: space-between;
@@ -219,6 +224,7 @@ header{
     display: flex;
     justify-content: space-between;
     a{
+      width: auto;
       font-weight: 700;
       color: #000;
       margin: 0;
@@ -333,6 +339,10 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    a{
+      width: 25%;
+    }
+    
   }
 }
 
@@ -418,5 +428,133 @@ header{
       
       }
       
+  }
+}
+
+.item{
+  margin: 0 auto;
+  .container{
+    margin-top: 30px;
+    width: 1200px;
+    display: flex;
+    .left-block{
+      width: 60%;
+      display: inline-flex;
+      flex-direction: column;
+      img{
+        width: 100%;
+        margin-top: 5px;
+      }
+      .upper-images{
+        display: flex;
+        justify-content: space-between;
+        img{
+          width: 49.6%;
+        }
+      }
+     
+    }
+    .right-block{
+      width: 40%;
+      padding: 0 0 0 60px;
+      .right-block-header{
+        display: flex;
+        justify-content: space-between;
+      }
+      h2{
+        text-transform: uppercase;
+        font-size: 20px;
+        width: 300px;
+        margin: 10px 0;
+      }
+      p{
+        font-weight: bold;
+        font-size: 16px;
+
+      }
+      h3{
+        margin: 0;
+        font-weight: 400;
+        text-transform:capitalize;
+        color:#464646;
+        font-size: 15px;
+      }
+      .sizes-title{
+        margin-top: 30px;
+        font-size: 16px;
+      }
+      .sizes{
+        .size{
+          padding: 10px 15px;
+          width: 50px;
+          background-color: transparent;
+          text-transform: uppercase;
+          border: 1px solid black;
+          border-radius: 3px;
+          margin: 0 2px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover{
+            background-color: black;
+            color: white;
+          &:focus{
+            background-color: #5a81dd;
+            border: 1px solid #5a81dd;
+          }
+          }
+        }
+      }
+    }
+    .add-buttons{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 30px;
+
+      button{
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      button:first-child{
+        background-color: #5a81dd;
+        color: white;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+        background-color: #4e70be;
+        }
+        &:focus{
+          background-color: #5b81da;
+
+        }
+      }
+      button:nth-child(2){
+        background-color: rgb(210, 210, 210);
+        color: black;
+        margin-top: 5px;
+      }
+    }
+    .description-block{
+      margin-top: 30px;
+      width: 100%;
+      h3{
+        font-size:15px;
+        font-weight: bold;
+        color: black;
+      }
+      h4{
+        color:#464646;
+        
+      }
+      p{
+        font-size: 15px;
+        font-weight: 500;
+        color:#6a6a6a
+
+      }
+    }
   }
 }

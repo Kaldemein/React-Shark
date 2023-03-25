@@ -2,7 +2,7 @@ import React from 'react';
 import style from './AccessoriesCard.module.scss';
 import { useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../../redux/slices/cartSlice';
-const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, onClickAdd }) => {
+const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, size, onClickAdd }) => {
   const [openSizes, setOpenSizes] = React.useState(false);
   const dispatch = useDispatch();
   const onClickSizes = (size) => {
@@ -32,15 +32,20 @@ const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, onCli
             : { visibility: 'hidden', opacity: '0' }
         }
         className={style.AccessoriesCard__sizes}>
-        {sizes.length === 0 ? (
-          <button className={style.noSizeButton}>Add to cart</button>
-        ) : (
-          sizes.map((size) => (
-            <li>
-              <button onClick={() => onClickSizes(size)}>{size}</button>
-            </li>
-          ))
-        )}
+        {sizes ? (
+          sizes.length === 0 ? (
+            <button onClick={() => onClickSizes(null)} className={style.noSizeButton}>
+              Add to cart
+            </button>
+          ) : (
+            sizes.map((size) => (
+              <li>
+                <button onClick={() => onClickSizes(size)}>{size}</button>
+              </li>
+            ))
+          )
+        ) : null}
+        {size ? 'Size: ' + size.toUpperCase() : null}
       </ul>
     </div>
   );

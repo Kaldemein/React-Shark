@@ -2,10 +2,10 @@ import React from 'react';
 import Card from './Card';
 import { useSelector } from 'react-redux';
 import Skeleton from './Card/Skeleton.jsx';
+import { Link } from 'react-router-dom';
 function ShopSection({ items, headling, sort, onClickAdd }) {
   const { sortType, sortValue } = sort;
   const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
-  console.log(isLoaded);
   return (
     <div className="shop-section">
       <div className="container">
@@ -23,7 +23,11 @@ function ShopSection({ items, headling, sort, onClickAdd }) {
                   ),
                 )
                 .slice(0, 4)
-                .map((item) => <Card onClickAdd={onClickAdd} {...item} />)
+                .map((item) => (
+                  <Link to={`/item/${item.id}`}>
+                    <Card onClickAdd={onClickAdd} {...item} />
+                  </Link>
+                ))
             : [...new Array(4)].map((_, i) => <Skeleton key={i} />)}
         </div>
       </div>

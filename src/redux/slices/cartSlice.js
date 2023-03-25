@@ -3,6 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   openDrawer: false,
   cart: [],
+  totalPrice: 0,
+  activeSize: null,
 };
 
 export const cartSlice = createSlice({
@@ -20,14 +22,22 @@ export const cartSlice = createSlice({
     },
     onRemove(state, action) {
       state.cart = state.cart.filter((obj) => obj.id !== action.payload);
+      state.totalPrice = 0;
+      state.cart.map((obj) => (state.totalPrice += obj.price));
     },
     onAdd(state, action) {
       state.cart.push({ ...action.payload });
+      state.totalPrice = 0;
+      state.cart.map((obj) => (state.totalPrice += obj.price));
+    },
+    onChooseSize(state, action) {
+      state.activeSize = action.payload;
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { setOpenDrawer, closeDrawer, setCart, onRemove, onAdd } = cartSlice.actions;
+export const { setOpenDrawer, closeDrawer, setCart, onRemove, onAdd, onChooseSize } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;

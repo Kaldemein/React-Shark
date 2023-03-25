@@ -4,10 +4,12 @@ import ItemCard from '../ItemCart/';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setOpenDrawer, closeDrawer, setCart, onRemove } from '../../redux/slices/cartSlice';
+import { Link } from 'react-router-dom';
 
 const Drawer = ({}) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const cart = useSelector((state) => state.cartSlice.cart);
+  const totalPrice = useSelector((state) => state.cartSlice.totalPrice);
 
   const dispatch = useDispatch();
   const drawerRef = React.useRef();
@@ -91,11 +93,13 @@ const Drawer = ({}) => {
         <div className={styles.cartBottom}>
           <div className={styles.totalPrice}>
             <p>total</p>
-            <p className="price">$155.00 USD</p>
+            <p className="price">${totalPrice} USD</p>
           </div>
           <div className={styles.bottomButtons}>
             <button>Checkout</button>
-            <button>Your bag</button>
+            <button>
+              <Link to="/cart">Your bag</Link>
+            </button>
           </div>
         </div>
       </div>

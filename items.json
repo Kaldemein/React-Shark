@@ -1,155 +1,173 @@
 {
   "items": [
     {
-      "id": 1,
+      "id": "1",
       "category": "shirt",
       "title": "Power T-Shirt",
-      "price": "40",
+      "price": 40,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerT-Shirt-A2A1X-BBBB.D3-Edit_CM_387b9104-894f-47ba-8418-188f66aaa0e2_600x.jpg?v=1660211846",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerT-Shirt-A2A1X-BBBB.D3-Edit_CM_8e462756-2479-4972-b5c4-4d72b917d846_3840x.jpg?v=1663674343",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerT-Shirt-A2A1X-BBBB.C-Edit_CM_b26815c5-552d-4340-a29d-33053bbc8346_3840x.jpg?v=1663674344",
       "color": "Black",
       "isNew": false,
       "type": "pump cover",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 2,
+     },
+     {
+      "id": "2",
       "category": "shirt",
       "title": "Power Washed T-Shirt",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerAopCrewBlackA2A8C-BBBB3_9271976c-a252-4d6b-9441-00e762681bde_600x.jpg?v=1667466292",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerAopCrewBlackA2A8C-BBBB_cc239976-94a5-4221-bdcb-7f33081a23ae_3840x.jpg?v=1665600764",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerAopCrewBlackA2A8C-BBBB2_d550ba0a-ecb7-4cad-802c-aabab5361a3c_3840x.jpg?v=1665600764",
       "color": "Black",
       "isNew": false,
       "type": "pump cover",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 3,
+     },
+     {
+      "id": "3",
       "category": "shirt",
       "title": "Essential Oversized T-Shirt",
-      "price": "40",
+      "price": 40,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/OversizedT-ShirtWhiteA1A3E.A-Edit_BK_e0bd1dc3-17c1-4301-a69f-278b601b6841_600x.jpg?v=1660211842",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/OversizedT-ShirtWhiteA1A3E.B-Edit_BK_d111aace-cf58-42da-b17c-f61ee86f9f42_3840x.jpg?v=1647041693",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/OversizedT-ShirtWhiteA1A3E.C-Edit_BK_04f443d6-7848-4bcf-a731-85c8a46c4f9b_3840x.jpg?v=1647041693",
       "color": "White",
       "isNew": false,
       "type": "pump cover",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 4,
+     },
+     {
+      "id": "4",
       "category": "shirt",
       "title": "Power Washed Rag Top",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/PowerRagTopBlackA2A9I-BBBB3_6f5f2fac-339e-4ca6-a608-535dadea3cb2_600x.jpg?v=1667466294",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerRagTopBlackA2A9I-BBBB1_cad03e36-ad93-4540-9f66-292e1e049755_3840x.jpg?v=1665600779",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/PowerRagTopBlackA2A9I-BBBB4_27fc1f8c-ef8b-4bd6-8dc5-9c456f23497f_3840x.jpg?v=1665600779",
       "color": "Black",
       "isNew": false,
       "type": "pump cover",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 5,
+     },
+     {
+      "id":" 5",
       "category": "shirt",
       "title": "Recovery Graphic T-Shirt",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXRecoveryOversizedSST-Shirt-Black-A3A6J-BBBB-0237.30_600x.jpg?v=1671450315",
+      "imageURL2":"",
+      "imageURL3":"",
       "color": "Black",
       "isNew": false,
       "type": "pump cover",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 6,
+     },
+     {
+      "id": "6",
       "category": "top",
       "title": "Sweat Seamless Longline Tank",
-      "price": "50",
+      "price": 50,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLongTankParadiseBlueB4A7U-UBZG-0392.38_800x.jpg?v=1675367880",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/AMINAEXTRAIMAGES4_3840x.jpg?v=1675716047",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/SweatSeamlessLowerCoverageSportsBraParadiseBlueB4A4Q-UBZG-0450.46_3840x.jpg?v=1675716047",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
       "sex": "woman",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 7,
+     },
+     {
+      "id": "7",
       "category": "shorts",
       "title": "Sweat Seamless Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessShortsParadiseBlueB6A4S-UBZG.338.52_800x.jpg?v=1675367864",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/AMINAEXTRAIMAGES5_3840x.jpg?v=1675716061",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/SweatSeamlessShortsParadiseBlueB6A4S-UBZG.356.54_3840x.jpg?v=1675716061",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
       "sex": "woman",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
-    {
-      "id": 8,
+     },
+     {
+      "id": "8",
       "category": "top",
       "title": "Sweat Seamless Sports Bra",
-      "price": "40",
+      "price": 40,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLowerCoverageSportsBraAerospaceOrangeB4A4Q-OBJX-0675.65_800x.jpg?v=1675367883",
+      "imageURL2":"https://cdn.shopify.com/s/files/1/0156/6146/products/AMINAEXTRAIMAGES10_3840x.jpg?v=1675716045",
+      "imageURL3":"https://cdn.shopify.com/s/files/1/0156/6146/products/SweatSeamlessLowerCoverageSportsBraAerospaceOrangeB4A4Q-OBJX-0678.66_3840x.jpg?v=1675716045",
       "color": "White",
       "isNew": false,
       "type": "training essentials",
       "sex": "woman",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+       "xs",
+       "s",
+       "m",
+       "l",
+       "xl"
       ]
-    },
+     },
     {
-      "id": 9,
+      "id": "9",
       "category": "leggings",
       "title": "Sweat Seamless Leggings",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SweatSeamlessLeggings2AerospaceOrange-B6A4T-OBJX18_800x.jpg?v=1675791617",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -163,11 +181,13 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "category": "shirt",
       "title": "Recovery Graphic T-Shirt",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/LegacyRagTopLightGreyCoreMarlA2A4O-GBCN.A-Edit_BK_600x.jpg?v=1650962669",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "pump cover",
@@ -181,11 +201,13 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "category": "top",
       "title": "Vital Seamless 2.0 V Neck Sports Bra",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSSPORTSBRAAWB3A4KB3A4K-UBZ6-0517.46_5b131c92-1523-425a-896f-a324eb6f078d_800x.jpg?v=1674463031",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": true,
       "type": "training essentials",
@@ -199,11 +221,13 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "category": "leggings",
       "title": "Vital Seamless 2.0 Leggings",
-      "price": "65",
+      "price": 65,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWLEGGINGSB1A2BB1A2B-UBZ6-0621.56_f74fded9-2cc0-4900-b509-c2ea6044d160_800x.jpg?v=1674463049",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": true,
       "type": "training essentials",
@@ -217,11 +241,13 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "category": "top",
       "title": "vital seamless 2.0 1/4 track top",
-      "price": "55",
+      "price": 55,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITAL1_4TRACKTOPREGULARB5A2KBrickRed_MarlB5A2K-RBML-1733.175_800x.jpg?v=1674553395",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Brick red marl",
       "isNew": true,
       "type": "training essentials",
@@ -235,11 +261,13 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "category": "shorts",
       "title": "Vital seamless 2.0 shorts",
-      "price": "55",
+      "price": 55,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWSHORTBrickRed_MarlB1A4J-RBML-1232.117_9def873c-8a7a-4533-a3df-8c86978436f9_800x.jpg?v=1674463048",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Brick red marl",
       "isNew": true,
       "type": "training essentials",
@@ -253,11 +281,13 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "category": "longsleeve",
       "title": "Critical 2.0 Drop Arm Tank",
-      "price": "30",
+      "price": 30,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXApolloMuscleFitLsT-ShirtBlackA4A4M-BBBB-0340.58_600x.jpg?v=1675110219",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -271,11 +301,13 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "category": "hoodie",
       "title": "Legacy Drop Arm Hoodie",
-      "price": "55",
+      "price": 55,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CREST_JOGGER_-_BLACK.A-Edit_ZH_1_600x.jpg?v=1668603247",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Limestone Marl",
       "isNew": false,
       "type": "training essentials",
@@ -289,11 +321,13 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "category": "shorts",
       "title": "Legacy Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CriticalSlimDropArmTankBlack-A1A2RA1A2R-BBBB.A_ZH_ZH_600x.jpg?v=1650962667",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -307,11 +341,13 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "category": "shorts",
       "title": "Bold shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVAL5_WOVENSHORTSBLACK.A-Edit_AS_e6ce8485-0934-4dce-8c88-a4c0615703c2_600x.jpg?v=1660211659",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -325,11 +361,13 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "category": "leggings",
       "title": "Legacy Seamless 2.0 Leggings",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWLEGGINGSB1A2BB1A2B-UBZ6-0621.56_f74fded9-2cc0-4900-b509-c2ea6044d160_800x.jpg?v=1674463049",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": false,
       "type": "training essentials",
@@ -343,11 +381,13 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "category": "shorts",
       "title": "Legacy Seamless 2.0 Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALSEAMLESSWSHORTB1A4JEveningBlueMarl-0906.80_3377c653-afce-4407-8faa-f61873f9429f_800x.jpg?v=1674463048",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": false,
       "type": "training essentials",
@@ -361,11 +401,13 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "category": "top",
       "title": "Legacy sports bra",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/TRAININGMINIMALSPORTSBRAEveningBlueB3A2J-UBZF-1109.130_800x.jpg?v=1674742426",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": false,
       "type": "training essentials",
@@ -379,11 +421,13 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "category": "top",
       "title": "Legacy seamless 2.0 light long sleeve top",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/VITALLIGHTLSTOPB4A8CB4A8C-UBZ6-0546.50_ec00001d-0f0e-4c4b-87b8-21f84dc796c2_800x.jpg?v=1674463019",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Evening Blue Marl",
       "isNew": false,
       "type": "training essentials",
@@ -397,11 +441,13 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "category": "hoodie",
       "title": "Crest Hoodie",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestHoodieM_Slim_TruffleBrown-A2A4G-NBH4-1095.110-Edit_AS_f6304355-7d65-4d91-84dd-be1370f83110_800x.jpg?v=1674463063",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Truffle Brown",
       "isNew": false,
       "type": "rest day",
@@ -415,11 +461,13 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "category": "joggers",
       "title": "Crest Joggers",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestPant_Slim_TruffleBrown-A2A4H-NBH4-1190.123-Edit_AS_b752ca72-e106-462f-8714-038eafa8ab63_800x.jpg?v=1674463063",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Truffle Brown",
       "isNew": false,
       "type": "rest day",
@@ -433,11 +481,13 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "category": "shirt",
       "title": "Crest long sleeve t-shirt",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestLsT-Shirt_Regular_BlackA1A9E-BBBB.A_ZH_ZH_83137828-0b51-4d4d-8177-769e731d798b_800x.jpg?v=1644402038",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "rest day",
@@ -451,11 +501,13 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "category": "joggers",
       "title": "Crest joggers",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CREST_JOGGER_-_BLACK.A-Edit_ZH_1_800x.jpg?v=1666101966",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "rest day",
@@ -469,11 +521,13 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "category": "shorts",
       "title": "Arrival shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVALSHORTSGMSH3475-BK.A-Edit_CM_800x.jpg?v=1608495283",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -487,11 +541,13 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "category": "joggers",
       "title": "Arrival knit joggers",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/A1A1Y-BBBBArrivalSlimKnitPantBlackELLIS16.A_GB_EDIT_GB_BK_800x.jpg?v=1628755049",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -505,11 +561,13 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "category": "pullover",
       "title": "Arrival 1/4 zip pullover",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/Arrival14ZipCharcoalGreyELLIS22.A_GB_EDIT_ZH_New_581cd389-9831-46af-b547-9f561ad5b3c5_800x.jpg?v=1645778479",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": false,
       "type": "training essentials",
@@ -523,11 +581,13 @@
       ]
     },
     {
-      "id": 31,
+      "id": "31",
       "category": "shorts",
       "title": "Crest Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrestShortBlackA1A2O41.A-Edit_HK_ZH_40ae7061-07b3-471a-a8fb-b5ea6d1d9bda_600x.jpg?v=1644508076",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -541,11 +601,13 @@
       ]
     },
     {
-      "id": 32,
+      "id": "32",
       "category": "shorts",
       "title": "Sport Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/SportShortBlackA3A1Q-BBBB-0213.20_600x.jpg?v=1667466331",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "type": "training essentials",
@@ -559,11 +621,13 @@
       ]
     },
     {
-      "id": 33,
+      "id": "33",
       "category": "shorts",
       "title": "Arrival 5 Shorts",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/ARRIVAL5_WOVENSHORTSBLACK.A-Edit_AS_e6ce8485-0934-4dce-8c88-a4c0615703c2_600x.jpg?v=1660211659",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": false,
       "type": "training essentials",
@@ -577,123 +641,117 @@
       ]
     },
     {
-      "id": 34,
+      "id": "34",
       "category": "socks",
       "title": "Socks",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrewSocks5pk-WhiteI2A3S-WBBM_8e89427b-746b-453d-bb4d-94654134d8da_600x.jpg?v=1673528955",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
       "sizes": [
-        "xs",
         "s",
         "m",
-        "l",
-        "xl"
+        "l"
       ]
     },
     {
-      "id": 34,
+      "id": "35",
       "category": "bottles",
       "title": "Bottle",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/2.2LitreWaterBottle-Black-GABO5412-BK-OSB_e9b95b0a-f817-43c6-bfcc-c26f9900b9cc_600x.jpg?v=1661856350",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
       ]
     },
     {
-      "id": 34,
+      "id": "36",
       "category": "bottles",
       "title": "Bottle",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/1LWaterBottleBlack-I2A6T-BBBB20_600x.jpg?v=1673528948",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
       "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
+        "2L",
+        "4L"
       ]
     },
     {
-      "id": 34,
+      "id": "37",
       "category": "socks",
       "title": "Socks",
-      "price": "45",
-      "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/CrewSocks5PkScandiPink-EcruBrown-RiverStoneGrey-FloraGreen-DustyOliveI3A1Y-KBSJ-18_600x.jpg?v=1673528954",
+      "price": 45,
+      "imageUR": "https://cdn.shopify.com/s/files/1/0156/6146/products/CrewSocks3pkWhite-LightGreyMarl-BlackI1A2F-WBC5150_ZH_ZH_eb25beb1-0d50-46bc-b35f-234d3fb0164e_3840x.jpg?v=1679072668",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
       "sizes": [
-        "xs",
         "s",
         "m",
-        "l",
-        "xl"
+        "l"
       ]
     },
     {
-      "id": 34,
+      "id": "38",
       "category": "socks",
       "title": "Socks",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/KneeSleevesBlackI1A2V191.D2-Edit_GB_BK5mm_ea33bb35-73cf-4737-8471-d04e32f4e5dc_600x.jpg?v=1665513026",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
       "sizes": [
-        "xs",
         "s",
         "m",
-        "l",
-        "xl"
+        "l"
       ]
     },
     {
-      "id": 34,
+      "id": "39",
       "category": "bags",
       "title": "Bag",
-      "price": "45",
+      "price": 45,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/EverydayHoldallBlack-SMALL-I3A1V-BBBB35_600x.jpg?v=1673528984",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Grey",
       "isNew": true,
       "type": "accessories",
       "sex": "men",
-      "sizes": [
-        "xs",
-        "s",
-        "m",
-        "l",
-        "xl"
-      ]
+      "sizes": []
     }
   ],
   "cart": [
     {
       "title": "Critical 2.0 Drop Arm Tank",
-      "price": "30",
+      "price": 30,
       "imageUR": "https://cdn.shopify.com/s/files/1/1367/5207/products/GFXApolloMuscleFitLsT-ShirtBlackA4A4M-BBBB-0340.58_600x.jpg?v=1675110219",
+      "imageURL2": "",
+      "imageURL3": "",
       "color": "Black",
       "isNew": false,
       "size": "xl",
-      "id": 15
+      "id": "15"
     }
   ]
 }

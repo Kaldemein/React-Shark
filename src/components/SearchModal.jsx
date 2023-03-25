@@ -1,10 +1,14 @@
 import React from 'react';
 import Card from './Card/index';
 import debounce from 'lodash.debounce';
+import { Link } from 'react-router-dom';
+import { closeDrawer } from '../redux/slices/cartSlice';
+import { useDispatch } from 'react-redux';
 
 function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputValue }) {
   const [localValue, setLocalValue] = React.useState('');
-
+  const dispatch = useDispatch();
+  const inputRef = React.useRef();
   const testDebunce = React.useCallback(
     debounce((str) => {
       setInputValue(str);
@@ -21,10 +25,16 @@ function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputVal
     setInputValue('');
   };
 
+  React.useEffect(() => {
+    inputRef.current.focus();
+    console.log(openSearch);
+  }, []);
+
   return (
     <div style={openSearch ? { display: 'block' } : { display: 'none' }} className="search-modal">
       <div className="search-modal__container">
         <input
+          ref={inputRef}
           onChange={(e) => onInputChange(e)}
           value={localValue}
           placeholder="Search something..."
@@ -52,7 +62,13 @@ function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputVal
       <div className="search-modal__items">
         {items
           .filter((item) => item.title.toLowerCase().includes(inputValue.toLowerCase()))
-          .map((item) => (inputValue.length > 0 ? <Card {...item} /> : null))}
+          .map((item) =>
+            inputValue.length > 0 ? (
+              <Link onClick={() => onClickClose()} to={`/item/${item.id}`}>
+                <Card {...item} />
+              </Link>
+            ) : null,
+          )}
       </div>
     </div>
   );

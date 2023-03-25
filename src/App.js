@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Woman from './pages/Woman';
 import Men from './pages/Men';
 import Accessories from './pages/Accessories';
+import Cart from './pages/Cart';
+import Item from './pages/Item';
 import axios from 'axios';
 import SearchModal from './components/SearchModal';
 import Drawer from './components/Drawer/';
@@ -28,6 +30,7 @@ function App() {
 
   const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  const cart = useSelector((state) => state.cartSlice.cart);
   console.log(isLoaded);
   const dispatch = useDispatch();
 
@@ -105,6 +108,22 @@ function App() {
           }
           openSearch={openSearch}
         />
+        <Route
+          exact
+          path="/cart"
+          element={
+            <Cart
+              setActiveFilter={setActiveFilter}
+              activeFilter={activeFilter}
+              filterBy={filterBy}
+              setFilterBy={setFilterBy}
+              cart={cart}
+              onClickAdd={onClickAdd}
+            />
+          }
+          openSearch={openSearch}
+        />
+        <Route path="item/:id" element={<Item onClickAdd={onClickAdd} />} />
       </Routes>
     </div>
   );

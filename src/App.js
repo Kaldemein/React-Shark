@@ -6,6 +6,7 @@ import Woman from './pages/Woman';
 import Men from './pages/Men';
 import Accessories from './pages/Accessories';
 import Cart from './pages/Cart';
+
 import Item from './pages/Item';
 import axios from 'axios';
 import SearchModal from './components/SearchModal';

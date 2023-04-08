@@ -3,6 +3,7 @@ import logoSvg from '../img/logoSvg.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
+
 const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
   const cart = useSelector((state) => state.cartSlice.cart);
   // const items = useSelector(state => state)

@@ -14,6 +14,7 @@ import {
 const Item = ({ onClickAdd }) => {
   const [item, setItem] = React.useState();
   const { id } = useParams();
+  const { activeSize, setActiveSize } = React.useState(null);
 
   React.useEffect(() => {
     async function fetchItem() {

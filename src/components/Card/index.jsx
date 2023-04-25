@@ -8,7 +8,12 @@ const Card = ({ title, price, type, category, imageUR, color, isNew, sizes, id, 
   const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
 
-  const onClickSizes = (size) => {
+  const onClickSizes = (size, event) => {
+    console.log(event);
+    console.log(event.target);
+    console.log(event.currentTarget);
+    event.stopPropagation();
+    event.preventDefault();
     onClickAdd({ id, title, type, price, category, imageUR, color, isNew, size });
     dispatch(setOpenDrawer());
   };
@@ -29,7 +34,7 @@ const Card = ({ title, price, type, category, imageUR, color, isNew, sizes, id, 
         <ul>
           {sizes.map((size) => (
             <li>
-              <button onClick={() => onClickSizes(size)}>{size}</button>
+              <button onClick={(event) => onClickSizes(size, event)}>{size}</button>
             </li>
           ))}
         </ul>

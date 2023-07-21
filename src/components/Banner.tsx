@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Banner = ({ BannerBackground, headling }) => {
+type BannerProps = {
+  BannerBackground: string;
+  headling: string;
+}
+const Banner: React.FC<BannerProps> = ({ BannerBackground, headling }) => {
   return (
     <div
       style={{

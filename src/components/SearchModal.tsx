@@ -4,18 +4,37 @@ import debounce from 'lodash.debounce';
 import { Link } from 'react-router-dom';
 import { closeDrawer } from '../redux/slices/cartSlice';
 import { useDispatch } from 'react-redux';
+type Item = {
+  category: string;
+  color: string;
+  id: string;
+  imageUR: string;
+  isNew: string;
+  price: number;
+  sizes:  [];
+  title: string;
+  type: string;
+  onClickAdd: ({})=> void;
+}
 
-function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputValue }) {
+type SearchModalProps = {
+  openSearch: boolean;
+  items: Item[];
+  inputValue: string;
+  setOpenSearch: (openSearch: boolean) => void;
+  setInputValue: (value: string)=> void;
+} 
+const SearchModal:React.FC<SearchModalProps> = ({ openSearch, items, setOpenSearch, setInputValue, inputValue }) => {
   const [localValue, setLocalValue] = React.useState('');
   const dispatch = useDispatch();
-  const inputRef = React.useRef();
+  const inputRef = React.useRef<HTMLInputElement >(null);
   const testDebunce = React.useCallback(
-    debounce((str) => {
+    debounce((str: string) => {
       setInputValue(str);
     }, 800),
     [],
   );
-  const onInputChange = (e) => {
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLocalValue(e.target.value);
     testDebunce(e.target.value);
   };
@@ -26,8 +45,7 @@ function SearchModal({ openSearch, items, setOpenSearch, setInputValue, inputVal
   };
 
   React.useEffect(() => {
-    inputRef.current.focus();
-    console.log(openSearch);
+    inputRef.current?.focus();
   }, []);
 
   return (

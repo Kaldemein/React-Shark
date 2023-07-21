@@ -1,19 +1,19 @@
 import React from 'react';
 import styles from './Drawer.module.scss';
-import ItemCard from '../ItemCart/';
+import ItemCard from '../ItemCart';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setOpenDrawer, closeDrawer, setCart, onRemove } from '../../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
 
-const Drawer = ({}) => {
+const Drawer:React.FC = ({}) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const cart = useSelector((state) => state.cartSlice.cart);
   const totalPrice = useSelector((state) => state.cartSlice.totalPrice);
 
   const dispatch = useDispatch();
-  const drawerRef = React.useRef();
-  const cartRef = React.useRef();
+  const drawerRef = React.useRef<HTMLDivElement>(null);
+  const cartRef = React.useRef<HTMLDivElement>(null);
 
   //получаем товары в корзину
   const fetchCart = async () => {
@@ -24,7 +24,7 @@ const Drawer = ({}) => {
     fetchCart();
   }, [cart.length]);
 
-  const onClickRemove = (id) => {
+  const onClickRemove = (id: string) => {
     console.log(id);
     axios.delete(`https://641070ba45a5f98532468d6c.mockapi.io/cart/${id}`).then((response) => {
       dispatch(onRemove(id));
@@ -38,8 +38,8 @@ const Drawer = ({}) => {
 
   //Для закрытия окна щелчком мыши
   React.useEffect(() => {
-    drawerRef.current.addEventListener('click', (event) => {
-      if (!event.composedPath().includes(cartRef.current)) {
+    drawerRef.current && drawerRef.current.addEventListener('click', (event) => {
+      if (cartRef.current && !event.composedPath().includes(cartRef.current)) {
         dispatch(closeDrawer());
         // if (openDrawer) {
         //   dispatch(closeDrawer());
@@ -47,6 +47,19 @@ const Drawer = ({}) => {
       }
     });
   }, []);
+
+
+  type ItemCard = {
+    category: string;
+    color: string;
+    id: string;
+    imageUR: string;
+    isNew: boolean;
+    price: number;
+    size:  string;
+    title: string;
+    type: string;
+  }
 
   return (
     <div
@@ -85,7 +98,7 @@ const Drawer = ({}) => {
             </button>
           </div>
           <div className="items">
-            {cart.map((cartItem) => (
+            {cart.map((cartItem: ItemCard) => (
               <ItemCard onClickRemove={(id) => onClickRemove(id)} {...cartItem} />
             ))}
           </div>

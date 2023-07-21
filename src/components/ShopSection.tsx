@@ -3,7 +3,29 @@ import Card from './Card';
 import { useSelector } from 'react-redux';
 import Skeleton from './Card/Skeleton.jsx';
 import { Link } from 'react-router-dom';
-function ShopSection({ items, headling, sort, onClickAdd }) {
+
+
+type Item = {
+  category: string;
+  color: string;
+  id: string;
+  imageUR: string;
+  isNew: string;
+  price: number;
+  sizes: [];
+  title: string;
+  type: string;
+}
+type ShopSectionProps = {
+  items: []
+  headling: string;
+  sort: {
+    sortType:string[];
+    sortValue: string[];
+  };
+  onClickAdd: ({}) => void;
+}
+const ShopSection:React.FC<ShopSectionProps>= ({ items, headling, sort, onClickAdd }) => {
   const { sortType, sortValue } = sort;
   const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
   return (
@@ -17,13 +39,13 @@ function ShopSection({ items, headling, sort, onClickAdd }) {
         <div className="shop-section__items">
           {isLoaded
             ? items
-                .filter((item) =>
+                .filter((item: any) =>
                   sortType.every((type, index) =>
                     item[type].toLowerCase().includes(sortValue[index].toLowerCase()),
                   ),
                 )
                 .slice(0, 4)
-                .map((item) => (
+                .map((item: any) => (
                   <Link to={`/item/${item.id}`}>
                     <Card onClickAdd={onClickAdd} {...item} />
                   </Link>

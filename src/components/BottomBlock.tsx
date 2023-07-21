@@ -1,6 +1,11 @@
 import React from 'react';
-
-const BottomBlock = ({ background }) => {
+type BottomBlockProps = {
+  background: {
+    leftBackground: string;
+    rightBackground: string;
+  };
+}
+const BottomBlock:React.FC<BottomBlockProps> = ({ background }) => {
   return (
     <div className="bottom-block">
       <div

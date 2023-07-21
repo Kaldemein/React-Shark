@@ -10,7 +10,7 @@ import Cart from './pages/Cart';
 import Item from './pages/Item';
 import axios from 'axios';
 import SearchModal from './components/SearchModal';
-import Drawer from './components/Drawer/';
+import Drawer from './components/Drawer';
 import { Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setIsLoaded } from './redux/slices/loadingSlice';
@@ -21,24 +21,26 @@ import { onAdd } from './redux/slices/cartSlice';
 // onClickAdd
 //  items
 
-function App() {
-  const [openSearch, setOpenSearch] = React.useState(false);
-  // const [openDrawer, setOpenDrawer] = React.useState(false);
+const App:React.FC = () => {
+  const [openSearch, setOpenSearch] = React.useState<boolean>(false);
   const [items, setItems] = React.useState([]);
   const [inputValue, setInputValue] = React.useState('');
   const [activeFilter, setActiveFilter] = React.useState([]);
   const [filterBy, setFilterBy] = React.useState('all'); //filter для страницы accessories и axios запроса
 
+  //get props from redux store
   const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const cart = useSelector((state) => state.cartSlice.cart);
   console.log(isLoaded);
   const dispatch = useDispatch();
 
+  //open search window logic
   openSearch
     ? (document.body.style.overflow = 'hidden')
     : (document.body.style.overflow = 'visible');
 
+  //get items from mockAPI
   React.useEffect(() => {
     async function fetchData() {
       try {
@@ -59,16 +61,31 @@ function App() {
     fetchData();
   }, [filterBy]);
 
-  const onClickAdd = (obj) => {
-    console.log(obj.id);
+  type Item = {
+    category: string;
+    color: string;
+    id: string;
+    imageUR: string;
+    isNew: string;
+    price: number;
+    sizes: [];
+    title: string;
+    type: string;
+  }
+
+  const onClickAdd = (obj: Item) => {
+    console.log(obj);
+    //add item to api
     axios.post(`https://641070ba45a5f98532468d6c.mockapi.io/cart/`, obj);
+    //add item local
     dispatch(onAdd(obj));
   };
 
+  
   return (
     <div className="App">
       <Header setInputValue={setInputValue} openSearch={openSearch} setOpenSearch={setOpenSearch} />
-      <Drawer items={items} />
+      <Drawer />
       <SearchModal
         inputValue={inputValue}
         setInputValue={setInputValue}
@@ -78,24 +95,18 @@ function App() {
       />
       <Routes>
         <Route
-          exact
           path="/"
-          element={<Home onClickAdd={onClickAdd} items={items} openSearch={openSearch} />}
+          element={<Home onClickAdd={onClickAdd} items={items}/>}
         />
         <Route
-          exact
           path="/woman"
           element={<Woman onClickAdd={onClickAdd} items={items} />}
-          openSearch={openSearch}
         />
         <Route
-          exact
           path="/men"
           element={<Men onClickAdd={onClickAdd} items={items} />}
-          openSearch={openSearch}
         />
         <Route
-          exact
           path="/accessories"
           element={
             <Accessories
@@ -107,10 +118,8 @@ function App() {
               onClickAdd={onClickAdd}
             />
           }
-          openSearch={openSearch}
         />
         <Route
-          exact
           path="/cart"
           element={
             <Cart
@@ -122,7 +131,6 @@ function App() {
               onClickAdd={onClickAdd}
             />
           }
-          openSearch={openSearch}
         />
         <Route path="item/:id" element={<Item onClickAdd={onClickAdd} />} />
       </Routes>

@@ -2,10 +2,22 @@ import React from 'react';
 import style from './AccessoriesCard.module.scss';
 import { useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../../redux/slices/cartSlice';
-const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, size, onClickAdd }) => {
+type AccessoriesCardProps = { 
+  id:string, 
+  isNew:boolean;
+  title:string;
+  color:string;
+  price:number;
+  imageUR:string;
+  sizes: [];
+  size:string;
+  onClickAdd: ({})=> void
+}
+const AccessoriesCard:React.FC<AccessoriesCardProps> = ({ id, isNew, title, color, price, imageUR, sizes, size, onClickAdd }) => {
   const [openSizes, setOpenSizes] = React.useState(false);
   const dispatch = useDispatch();
-  const onClickSizes = (size) => {
+  
+  const onClickSizes = (size: string) => {
     onClickAdd({ id, title, price, imageUR, color, isNew, size });
     dispatch(setOpenDrawer());
   };
@@ -34,7 +46,7 @@ const AccessoriesCard = ({ id, isNew, title, color, price, imageUR, sizes, size,
         className={style.AccessoriesCard__sizes}>
         {sizes ? (
           sizes.length === 0 ? (
-            <button onClick={() => onClickSizes(null)} className={style.noSizeButton}>
+            <button onClick={() => onClickSizes('')} className={style.noSizeButton}>
               Add to cart
             </button>
           ) : (

@@ -1,7 +1,18 @@
 import React from 'react';
 import styles from './ItemCart.module.scss';
-
-const ItemCard = ({ id, title, price, imageUR, color, isNew, onClickRemove, size }) => {
+type ItemCardProps = {
+  category: string;
+  color: string;
+  id: string;
+  imageUR: string;
+  isNew: boolean;
+  price: number;
+  size:  string;
+  title: string;
+  type: string;
+  onClickRemove: (id: string)=> void;
+}
+const ItemCard:React.FC<ItemCardProps> = ({ id, title, price, imageUR, color, isNew, onClickRemove, size }) => {
   return (
     <div className={styles.item}>
       <img width={105} height={125} src={imageUR} alt="CartItem" />

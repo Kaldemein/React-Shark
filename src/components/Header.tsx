@@ -3,8 +3,12 @@ import logoSvg from '../img/logoSvg.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
-
-const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
+type HeaderProps = {
+  openSearch: boolean;
+  setOpenSearch: (openSearch: boolean) => void;
+  setInputValue: (value: string)=> void;
+}
+const Header:React.FC<HeaderProps> = ({ openSearch, setOpenSearch, setInputValue }) => {
   const cart = useSelector((state) => state.cartSlice.cart);
   // const items = useSelector(state => state)
   const dispatch = useDispatch();
@@ -44,7 +48,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
           <li>
             <div className="header__items" onClick={() => onClickSearch()}>
               <svg
-                class="Styles__SearchIcon-sc-4mixh6-1 jmTqIw"
+                className="Styles__SearchIcon-sc-4mixh6-1 jmTqIw"
                 width="20px"
                 height="20px"
                 viewBox="0 0 20 20"
@@ -55,7 +59,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
                 <title id="d9658b95-7c18-4508-894d-17bc7942dacf">
                   <fontsninja-text
                     id="fontsninja-text-370"
-                    class="fontsninja-family-variant_sans-serif_400_normal">
+                    className="fontsninja-family-variant_sans-serif_400_normal">
                     Search
                   </fontsninja-text>
                 </title>
@@ -92,7 +96,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
           <li>
             <div className="header__items">
               <svg
-                class="Styles__AccountIcon-sc-744ty0-5 kRqbv"
+                className="Styles__AccountIcon-sc-744ty0-5 kRqbv"
                 width="18"
                 height="18"
                 viewBox="0 0 18 18"
@@ -112,7 +116,7 @@ const Header = ({ openSearch, setOpenSearch, setInputValue }) => {
           <li>
             <div onClick={() => onClickDrawer()} className="header__items">
               <svg
-                class="Styles__BagIcon-sc-744ty0-12 dsqEKk"
+                className="Styles__BagIcon-sc-744ty0-12 dsqEKk"
                 width="16"
                 height="18"
                 viewBox="0 0 16 18"

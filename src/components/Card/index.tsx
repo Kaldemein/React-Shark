@@ -3,15 +3,25 @@ import styles from './Card.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../../redux/slices/cartSlice';
 
-const Card = ({ title, price, type, category, imageUR, color, isNew, sizes, id, onClickAdd }) => {
+type CardProps= {
+    category: string;
+    color: string;
+    id: string;
+    imageUR: string;
+    isNew: string;
+    price: number;
+    sizes:  [];
+    title: string;
+    type: string;
+    onClickAdd: ({})=> void;
+}
+const Card:React.FC<CardProps> = ({ title, price, type, category, imageUR, color, isNew, sizes, id, onClickAdd }) => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
 
-  const onClickSizes = (size, event) => {
-    console.log(event);
-    console.log(event.target);
-    console.log(event.currentTarget);
+  const onClickSizes = (size: string, event:React.MouseEvent<HTMLButtonElement>
+    ) => {
     event.stopPropagation();
     event.preventDefault();
     onClickAdd({ id, title, type, price, category, imageUR, color, isNew, size });
@@ -32,7 +42,7 @@ const Card = ({ title, price, type, category, imageUR, color, isNew, sizes, id, 
         }
         className={styles.sizes}>
         <ul>
-          {sizes.map((size) => (
+          {sizes.map((size:string) => (
             <li>
               <button onClick={(event) => onClickSizes(size, event)}>{size}</button>
             </li>

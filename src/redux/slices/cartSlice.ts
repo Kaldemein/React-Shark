@@ -1,6 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export type cartItem = {
+  category: string;
+  color: string;
+  id: string;
+  imageUR: string;
+  isNew: boolean;
+  price: number;
+  size:  string;
+  title: string;
+  type: string;
+}
+
+interface cartSliceState{
+  openDrawer: boolean;
+  cart: cartItem[];
+  totalPrice: number;
+  activeSize: number | null;
+}
+
+const initialState: cartSliceState = {
   openDrawer: false,
   cart: [],
   totalPrice: 0,
@@ -11,16 +30,16 @@ export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    setOpenDrawer(state, action) {
+    setOpenDrawer(state) {
       state.openDrawer = !state.openDrawer;
     },
-    closeDrawer(state, action) {
+    closeDrawer(state) {
       state.openDrawer = false;
     },
-    setCart(state, action) {
+    setCart(state, action: PayloadAction<cartItem[]>) {
       state.cart = action.payload;
     },
-    onRemove(state, action) {
+    onRemove(state, action: PayloadAction<string>) {
       state.cart = state.cart.filter((obj) => obj.id !== action.payload);
       state.totalPrice = 0;
       state.cart.map((obj) => (state.totalPrice += obj.price));

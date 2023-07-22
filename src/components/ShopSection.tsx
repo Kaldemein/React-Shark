@@ -3,6 +3,7 @@ import Card from './Card';
 import { useSelector } from 'react-redux';
 import Skeleton from './Card/Skeleton.jsx';
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../redux/store';
 
 
 type Item = {
@@ -27,7 +28,7 @@ type ShopSectionProps = {
 }
 const ShopSection:React.FC<ShopSectionProps>= ({ items, headling, sort, onClickAdd }) => {
   const { sortType, sortValue } = sort;
-  const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
+  const isLoaded = useAppSelector((state) => state.loadingSlice.isLoaded);
   return (
     <div className="shop-section">
       <div className="container">

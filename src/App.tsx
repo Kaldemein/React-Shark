@@ -12,9 +12,11 @@ import axios from 'axios';
 import SearchModal from './components/SearchModal';
 import Drawer from './components/Drawer';
 import { Routes, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { setIsLoaded } from './redux/slices/loadingSlice';
-import { onAdd } from './redux/slices/cartSlice';
+import { cartItem, onAdd } from './redux/slices/cartSlice';
+import { useAppDispatch } from './redux/store';
+
 
 //  for redux
 //  onClickRemove
@@ -33,7 +35,7 @@ const App:React.FC = () => {
   const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
   const cart = useSelector((state) => state.cartSlice.cart);
   console.log(isLoaded);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   //open search window logic
   openSearch
@@ -61,20 +63,19 @@ const App:React.FC = () => {
     fetchData();
   }, [filterBy]);
 
-  type Item = {
-    category: string;
-    color: string;
-    id: string;
-    imageUR: string;
-    isNew: string;
-    price: number;
-    sizes: [];
-    title: string;
-    type: string;
-  }
+  // type Item = {
+  //   category: string;
+  //   color: string;
+  //   id: string;
+  //   imageUR: string;
+  //   isNew: string;
+  //   price: number;
+  //   sizes: [];
+  //   title: string;
+  //   type: string;
+  // }
 
-  const onClickAdd = (obj: Item) => {
-    console.log(obj);
+  const onClickAdd = (obj: cartItem) => {
     //add item to api
     axios.post(`https://641070ba45a5f98532468d6c.mockapi.io/cart/`, obj);
     //add item local

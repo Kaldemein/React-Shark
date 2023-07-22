@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Card.module.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../../redux/slices/cartSlice';
-
+import {useAppSelector} from '../../redux/store'
 type CardProps= {
     category: string;
     color: string;
@@ -16,7 +16,7 @@ type CardProps= {
     onClickAdd: ({})=> void;
 }
 const Card:React.FC<CardProps> = ({ title, price, type, category, imageUR, color, isNew, sizes, id, onClickAdd }) => {
-  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
+  const openDrawer = useAppSelector((state) => state.cartSlice.openDrawer);
   const dispatch = useDispatch();
   const [openSizes, setOpenSizes] = React.useState(false);
 

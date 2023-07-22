@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export interface loadingSliceState{
+  isLoaded: boolean;
+}
+
+const initialState: loadingSliceState = {
   isLoaded: false,
 };
 
@@ -8,7 +12,7 @@ export const loadingSlice = createSlice({
   name: 'loading',
   initialState,
   reducers: {
-    setIsLoaded(state, action) {
+    setIsLoaded(state) {
       state.isLoaded = true;
     },
   },

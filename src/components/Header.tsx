@@ -3,15 +3,18 @@ import logoSvg from '../img/logoSvg.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDrawer } from '../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
+import {useAppDispatch} from '../redux/store';
+import { useAppSelector } from '../redux/store';
+
 type HeaderProps = {
   openSearch: boolean;
   setOpenSearch: (openSearch: boolean) => void;
   setInputValue: (value: string)=> void;
 }
 const Header:React.FC<HeaderProps> = ({ openSearch, setOpenSearch, setInputValue }) => {
-  const cart = useSelector((state) => state.cartSlice.cart);
+  const cart = useAppSelector((state) => state.cartSlice.cart);
   // const items = useSelector(state => state)
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onClickSearch = () => {
     setOpenSearch(!openSearch);
@@ -56,13 +59,6 @@ const Header:React.FC<HeaderProps> = ({ openSearch, setOpenSearch, setInputValue
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
                 aria-labelledby="d9658b95-7c18-4508-894d-17bc7942dacf">
-                <title id="d9658b95-7c18-4508-894d-17bc7942dacf">
-                  <fontsninja-text
-                    id="fontsninja-text-370"
-                    className="fontsninja-family-variant_sans-serif_400_normal">
-                    Search
-                  </fontsninja-text>
-                </title>
                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g
                     transform="translate(-1217.000000, -57.000000)"

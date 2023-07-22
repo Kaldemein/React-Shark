@@ -16,6 +16,8 @@ import { useSelector } from 'react-redux';
 import { setIsLoaded } from './redux/slices/loadingSlice';
 import { cartItem, onAdd } from './redux/slices/cartSlice';
 import { useAppDispatch } from './redux/store';
+import { useAppSelector } from './redux/store';
+
 
 
 //  for redux
@@ -31,9 +33,9 @@ const App:React.FC = () => {
   const [filterBy, setFilterBy] = React.useState('all'); //filter для страницы accessories и axios запроса
 
   //get props from redux store
-  const isLoaded = useSelector((state) => state.loadingSlice.isLoaded);
-  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
-  const cart = useSelector((state) => state.cartSlice.cart);
+  const isLoaded = useAppSelector((state) => state.loadingSlice.isLoaded);
+  const openDrawer = useAppSelector((state) => state.cartSlice.openDrawer);
+  const cart = useAppSelector((state) => state.cartSlice.cart);
   console.log(isLoaded);
   const dispatch = useAppDispatch();
 

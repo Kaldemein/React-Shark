@@ -5,11 +5,13 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { setOpenDrawer, closeDrawer, setCart, onRemove } from '../../redux/slices/cartSlice';
 import { Link } from 'react-router-dom';
+import {useAppSelector} from '../../redux/store'
+
 
 const Drawer:React.FC = ({}) => {
-  const openDrawer = useSelector((state) => state.cartSlice.openDrawer);
-  const cart = useSelector((state) => state.cartSlice.cart);
-  const totalPrice = useSelector((state) => state.cartSlice.totalPrice);
+  const openDrawer = useAppSelector((state) => state.cartSlice.openDrawer);
+  const cart = useAppSelector((state) => state.cartSlice.cart);
+  const totalPrice = useAppSelector((state) => state.cartSlice.totalPrice);
 
   const dispatch = useDispatch();
   const drawerRef = React.useRef<HTMLDivElement>(null);
